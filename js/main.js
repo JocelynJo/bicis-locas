@@ -44,7 +44,6 @@ function validateForm(){
     //campo obligatorio
     if(pass.length==0){
         alert("Falta Ingresar Password");
-        return false;
     }
     // condicio que password sea distinto a 123456 098754
     if(pass!="123456" && pass!="098754"){
@@ -73,13 +72,13 @@ function validateForm(){
     }
 
     //validar lista pendiente
-    var opcionBici = document.getElementsByClassName("form-control").selectedIndex;
-    if( opcionBici == null || opcionBici == 0 ) {
+  
+    var opcion = document.getElementsByTagName("select")[0].value;
+    if(opcion == "0") {
         alert("Elija una opcion de la lista");
-        return false;
     }
-
-
-
-    /* Escribe tú código aquí */
+    /*if(0 == document.getElementsByTagName('select')[0].selectedIndex){
+        alert("Elija una opcion de la lista"); 
+    }*/
+  
 }
